@@ -4,43 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="icon" type="image/png" href="images/hz-logo.png" />
     <link rel="stylesheet" href="global.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="why-it.html">Why IT</a>
-      <a href="goals.html">Goals</a>
-      <a href="directions.html">Directions</a>
-      <a href="blog.html">Blog</a>
-      <a href="dashboard.html">Dashboard</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="site-nav">
+      <div class="nav-inner">
+      <a class="site-logo" href="index.html">
+        <img src="images/hz-logo.png" alt="HZ University of Applied Sciences logo" onerror="this.remove()" />
+        Rosty Chikh
+      </a>
+      <div class="nav-links">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="why-it.html">Why IT</a>
+        <a href="goals.html">Goals</a>
+        <a href="direction.html">Directions</a>
+        <a href="blog.html">Blog</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      </div>
     </nav>
 
-    <main>
-      <h1>Hi, I'm Rosty</h1>
-      <p>
-        I'm Rostyslav Chikh. I've lived in the Netherlands for 4+ years,
-        I work as a planner at Zorgbalie, and after finishing Scalda
-        MBO 4 Software Development in 2 years I now study IT at HZ
-        University of Applied Sciences.
-      </p>
-      <p>
-        On the side I build software: a product called VroegSignaleren
-        with researchers from HZ, and tools for freelance clients who
-        want to optimise their business. I really enjoy automating and
-        optimising things, at work and at home.
-      </p>
-      <p>Use the navigation bar above to look around.</p>
+    <main id="main-content">
+      <section class="hero section-card">
+        <div>
+        <h1>Hi, I'm Rosty</h1>
+        <p>
+          I'm Rostyslav Chikh. I've lived in the Netherlands for 4+ years,
+          I work as a planner at Zorgbalie, and after finishing Scalda
+          MBO 4 Software Development in 2 years I now study IT at HZ
+          University of Applied Sciences.
+        </p>
+        <p>
+          On the side I build software: a product called VroegSignaleren
+          with researchers from HZ, and tools for freelance clients who
+          want to optimise their business. I really enjoy automating and
+          optimising things, at work and at home.
+        </p>
+        <p>Use the navigation bar above to look around.</p>
+        </div>
+
+        <figure>
+          <img src="images/rosty.jpg" alt="Rosty smiling in a garden next to big stone face sculptures" />
+        </figure>
+      </section>
+
+      <section class="section-card">
+        <h2>My interests</h2>
+        <ul>
+          <li>Playing volleyball and video games.</li>
+          <li>Spending time with my girlfriend.</li>
+          <li>Building fun stuff like Telegram bots.</li>
+        </ul>
+        <p>
+          Every now and then I also jump into Rust or Dota 2 with friends -
+          a good way to unwind after a day of coding.
+        </p>
+        <div class="gif-grid">
+          <div class="gif-frame" style="--card-color: var(--topic-blue); --card-color-rgb: var(--topic-blue-rgb)">
+            <img src="images/volleyball.png" alt="Ukraine national volleyball team celebrating a point" />
+          </div>
+          <div class="gif-frame" style="--card-color: var(--topic-crimson); --card-color-rgb: var(--topic-crimson-rgb)">
+            <div class="tenor-gif-embed" data-postid="17987865" data-share-method="host" data-aspect-ratio="1.04235" data-width="100%"><a href="https://tenor.com/view/dota2-gif-17987865">Dota2 GIF</a>from <a href="https://tenor.com/search/dota2-gifs">Dota2 GIFs</a></div>
+          </div>
+        </div>
+      </section>
+
+      <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     </main>
 
-    <footer>
-      <p>Rosty - Rostyslav Chikh</p>
-      <p>
-        Email: <a href="mailto:rchikh1234@gmail.com">rchikh1234@gmail.com</a> ·
-        <a href="https://github.com/Chikh124">GitHub</a> · Phone: 0631260771
-      </p>
-      <p>&copy; 2026 Rosty. First HZ portfolio assessment.</p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="index.html">
+          <img src="images/hz-logo.png" alt="HZ University of Applied Sciences logo" onerror="this.remove()" />
+          Rosty Chikh
+        </a>
+        <div class="footer-text">
+          <p>Rosty - Rostyslav Chikh</p>
+          <p>
+            Email: <a href="mailto:rchikh1234@gmail.com">rchikh1234@gmail.com</a> ·
+            <a href="https://github.com/Chikh124">GitHub</a> · Phone: 0631260771
+          </p>
+          <p>&copy; 2026 Rosty. First HZ portfolio assessment.</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

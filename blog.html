@@ -4,55 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
+    <link rel="icon" type="image/png" href="images/hz-logo.png" />
     <link rel="stylesheet" href="global.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="why-it.html">Why IT</a>
-      <a href="goals.html">Goals</a>
-      <a href="directions.html">Directions</a>
-      <a href="blog.html">Blog</a>
-      <a href="dashboard.html">Dashboard</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="site-nav">
+      <div class="nav-inner">
+      <a class="site-logo" href="index.html">
+        <img src="images/hz-logo.png" alt="HZ University of Applied Sciences logo" onerror="this.remove()" />
+        Rosty Chikh
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="why-it.html">Why IT</a>
+        <a href="goals.html">Goals</a>
+        <a href="direction.html">Directions</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      </div>
     </nav>
 
-    <main>
+    <main id="main-content">
       <h1>Blog</h1>
-      <p>Short notes about building this portfolio.</p>
+      <p>Notes from building this portfolio and from my study weeks at HZ, sorted into four topics. Click a card to read the full post.</p>
 
-      <article>
-        <h2>Day one</h2>
-        <p>
-          Created the first HTML pages and connected one global
-          stylesheet, so every page shares the same look.
-        </p>
-      </article>
+      <div class="blog-grid">
+        <a class="blog-card" href="blog-swot.html" style="--card-color: var(--topic-teal); --card-color-rgb: var(--topic-teal-rgb)">
+          <span class="post-meta">Self-reflection</span>
+          <h2>My SWOT as a student</h2>
+          <p class="excerpt">
+            Strengths, weaknesses, opportunities and threats, moved here
+            from the Goals page since it's more of a "what I know about
+            myself" note than a goal.
+          </p>
+          <span class="read-more">Read the post</span>
+        </a>
 
-      <article>
-        <h2>Day two</h2>
-        <p>
-          Made the navigation bar one solid block at the top and pinned
-          the footer to the bottom of the page.
-        </p>
-      </article>
+        <a class="blog-card" href="blog-study-weeks.html" style="--card-color: var(--topic-blue); --card-color-rgb: var(--topic-blue-rgb)">
+          <span class="post-meta">Study weeks</span>
+          <h2>What I did during study weeks</h2>
+          <p class="excerpt">
+            Short logs from HZ: Requirements Modelling, Foundations of
+            Data, Project: Foundations, and what actually happened versus
+            the plan.
+          </p>
+          <span class="read-more">Read the post</span>
+        </a>
 
-      <article>
-        <h2>Day three</h2>
-        <p>
-          Filled the pages with real content: my work at Zorgbalie, the
-          VroegSignaleren project with HZ, and my freelance work.
-        </p>
-      </article>
+        <a class="blog-card" href="blog-portfolio-log.html" style="--card-color: var(--topic-pink); --card-color-rgb: var(--topic-pink-rgb)">
+          <span class="post-meta">Portfolio</span>
+          <h2>Building this portfolio</h2>
+          <p class="excerpt">
+            A dev diary of putting this site together: HTML pages, one
+            shared stylesheet, a real navigation bar, and real content.
+          </p>
+          <span class="read-more">Read the post</span>
+        </a>
+
+        <a class="blog-card" href="blog-side-projects.html" style="--card-color: var(--topic-gold); --card-color-rgb: var(--topic-gold-rgb)">
+          <span class="post-meta">Side projects</span>
+          <h2>VroegSignaleren, freelance, and weekend builds</h2>
+          <p class="excerpt">
+            Notes on the product I build with HZ researchers, the
+            business-optimisation tool for a freelance client, and the
+            smaller things I ship on weekends.
+          </p>
+          <span class="read-more">Read the post</span>
+        </a>
+      </div>
     </main>
 
-    <footer>
-      <p>Rosty - Rostyslav Chikh</p>
-      <p>
-        Email: <a href="mailto:rchikh1234@gmail.com">rchikh1234@gmail.com</a> ·
-        <a href="https://github.com/Chikh124">GitHub</a> · Phone: 0631260771
-      </p>
-      <p>&copy; 2026 Rosty. First HZ portfolio assessment.</p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-brand" href="index.html">
+          <img src="images/hz-logo.png" alt="HZ University of Applied Sciences logo" onerror="this.remove()" />
+          Rosty Chikh
+        </a>
+        <div class="footer-text">
+          <p>Rosty - Rostyslav Chikh</p>
+          <p>
+            Email: <a href="mailto:rchikh1234@gmail.com">rchikh1234@gmail.com</a> ·
+            <a href="https://github.com/Chikh124">GitHub</a> · Phone: 0631260771
+          </p>
+          <p>&copy; 2026 Rosty. First HZ portfolio assessment.</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

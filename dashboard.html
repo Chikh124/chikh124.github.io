@@ -4,49 +4,185 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    <link rel="icon" type="image/png" href="images/hz-logo.png" />
     <link rel="stylesheet" href="global.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="why-it.html">Why IT</a>
-      <a href="goals.html">Goals</a>
-      <a href="directions.html">Directions</a>
-      <a href="blog.html">Blog</a>
-      <a href="dashboard.html">Dashboard</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="site-nav">
+      <div class="nav-inner">
+      <a class="site-logo" href="index.html">
+        <img src="images/hz-logo.png" alt="HZ University of Applied Sciences logo" onerror="this.remove()" />
+        Rosty Chikh
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="why-it.html">Why IT</a>
+        <a href="goals.html">Goals</a>
+        <a href="direction.html">Directions</a>
+        <a href="blog.html">Blog</a>
+        <a href="dashboard.html" aria-current="page">Dashboard</a>
+      </div>
+      </div>
     </nav>
 
-    <main>
+    <main id="main-content">
       <h1>Dashboard</h1>
       <p>A quick overview of what I'm working on and where my skills are.</p>
 
-      <h2>Working on now</h2>
-      <ul>
-        <li>VroegSignaleren - development role, with HZ Vlissingen researchers</li>
-        <li>A business-optimisation product for a freelance client</li>
-        <li>This portfolio, for the HZ assessment</li>
-      </ul>
+      <section class="section-card">
+        <h2>Working on now</h2>
+        <ul>
+          <li>VroegSignaleren - development role, with HZ Vlissingen researchers</li>
+          <li>A business-optimisation product for a freelance client</li>
+          <li>This portfolio, for the HZ assessment</li>
+        </ul>
 
-      <h2>Skills</h2>
-      <ul>
-        <li>Backend (Docker, Python, TypeScript) - more than enough</li>
-        <li>Unit testing - if side project is important</li>
-        <li>CI/CD - learning</li>
-        <li>Frontend / Vue, Next.js, React - more than enough to understand what is there.</li>
-      </ul>
+        <h2>Skills</h2>
+        <ul>
+          <li>Backend (Docker, Python, TypeScript) - more than enough</li>
+          <li>Unit testing - if side project is important</li>
+          <li>CI/CD - learning</li>
+          <li>Frontend / Vue, Next.js, React - more than enough to understand what is there.</li>
+        </ul>
+      </section>
 
-      <h2>Next step</h2>
-      <p>Get the propedeuse and find more clients.</p>
+      <section class="section-card">
+      <h2>Curriculum (P)</h2>
+      <p>Fill in a grade for each exam - the propedeuse progress bar below updates as you go.</p>
+
+      <div class="progress-wrap">
+        <div class="progress-stats">
+          <span id="progress-label">0 / 60 EC obtained</span>
+          <span id="progress-average">Average grade: -</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="60" aria-valuenow="0" id="progress-bar" aria-label="Propedeuse EC progress">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Quarter</th>
+            <th>Course</th>
+            <th>Exam</th>
+            <th>EC's</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">Q1</td>
+            <td>Programme- &amp; Career Orientation</td>
+            <td>Assignment</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-pco" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Programme- and Career Orientation" /></td>
+          </tr>
+          <tr>
+            <td>Programming Basics</td>
+            <td>Assignment</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-progbasics" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Programming Basics" /></td>
+          </tr>
+          <tr>
+            <td>Computer Science Basics</td>
+            <td>Written knowledge test</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-csbasics" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Computer Science Basics" /></td>
+          </tr>
+          <tr>
+            <td rowspan="3">Q2</td>
+            <td>Object Oriented Programming</td>
+            <td>Assignment</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-oop" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Object Oriented Programming" /></td>
+          </tr>
+          <tr>
+            <td>Agile and Team Management</td>
+            <td>Assignment</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-agile" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Agile and Team Management" /></td>
+          </tr>
+          <tr>
+            <td>Project: Foundations</td>
+            <td>Portfolio</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-projfoundations" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Project: Foundations" /></td>
+          </tr>
+          <tr>
+            <td rowspan="3">Q3</td>
+            <td>Software Engineering Basics</td>
+            <td>Assignment</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-sebasics" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Software Engineering Basics" /></td>
+          </tr>
+          <tr>
+            <td>Foundations of Data</td>
+            <td>Assignment</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-dataFoundations" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Foundations of Data" /></td>
+          </tr>
+          <tr>
+            <td>Requirements Modelling</td>
+            <td>Assignment</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-reqmodelling" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Requirements Modelling" /></td>
+          </tr>
+          <tr>
+            <td rowspan="3">Q4</td>
+            <td>Web Application Development</td>
+            <td>Assignment</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-webdev" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Web Application Development" /></td>
+          </tr>
+          <tr>
+            <td>Data Science Basics</td>
+            <td>Assignment</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-dsbasics" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Data Science Basics" /></td>
+          </tr>
+          <tr>
+            <td>Project: Applied Client Solutions</td>
+            <td>Portfolio</td>
+            <td>5</td>
+            <td><input type="number" class="grade-input" id="grade-projclient" data-ec="5" min="1" max="10" step="0.1" aria-label="Grade for Project: Applied Client Solutions" /></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total</td>
+            <td>60</td>
+            <td id="total-average-cell">-</td>
+          </tr>
+        </tfoot>
+      </table>
+      </section>
+
+      <section class="section-card">
+        <h2>Next step</h2>
+        <p>Get the propedeuse and find more clients.</p>
+      </section>
     </main>
 
-    <footer>
-      <p>Rosty - Rostyslav Chikh</p>
-      <p>
-        Email: <a href="mailto:rchikh1234@gmail.com">rchikh1234@gmail.com</a> ·
-        <a href="https://github.com/Chikh124">GitHub</a> · Phone: 0631260771
-      </p>
-      <p>&copy; 2026 Rosty. First HZ portfolio assessment.</p>
-    </footer>
+    <script src="dashboard.js"></script>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <a class="footer-brand" href="index.html">
+            <img src="images/hz-logo.png" alt="HZ University of Applied Sciences logo" onerror="this.remove()" />
+            Rosty Chikh
+          </a>
+          <div class="footer-text">
+            <p>Rosty - Rostyslav Chikh</p>
+            <p>
+              Email: <a href="mailto:rchikh1234@gmail.com">rchikh1234@gmail.com</a> ·
+              <a href="https://github.com/Chikh124">GitHub</a> · Phone: 0631260771
+            </p>
+            <p>&copy; 2026 Rosty. First HZ portfolio assessment.</p>
+          </div>
+        </div>
+      </footer>
   </body>
 </html>
